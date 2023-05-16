@@ -37,20 +37,20 @@
             // listBoxAble
             // 
             this.listBoxAble.FormattingEnabled = true;
-            this.listBoxAble.ItemHeight = 16;
-            this.listBoxAble.Location = new System.Drawing.Point(973, 84);
+            this.listBoxAble.Location = new System.Drawing.Point(730, 68);
+            this.listBoxAble.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listBoxAble.Name = "listBoxAble";
-            this.listBoxAble.Size = new System.Drawing.Size(146, 516);
+            this.listBoxAble.Size = new System.Drawing.Size(110, 420);
             this.listBoxAble.TabIndex = 0;
             this.listBoxAble.SelectedIndexChanged += new System.EventHandler(this.listBoxAble_SelectedIndexChanged);
             // 
             // listBoxUnable
             // 
             this.listBoxUnable.FormattingEnabled = true;
-            this.listBoxUnable.ItemHeight = 16;
-            this.listBoxUnable.Location = new System.Drawing.Point(1125, 84);
+            this.listBoxUnable.Location = new System.Drawing.Point(844, 68);
+            this.listBoxUnable.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listBoxUnable.Name = "listBoxUnable";
-            this.listBoxUnable.Size = new System.Drawing.Size(146, 516);
+            this.listBoxUnable.Size = new System.Drawing.Size(110, 420);
             this.listBoxUnable.TabIndex = 1;
             // 
             // labelTitle
@@ -58,31 +58,35 @@
             this.labelTitle.AutoSize = true;
             this.labelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTitle.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelTitle.Location = new System.Drawing.Point(623, 9);
+            this.labelTitle.Location = new System.Drawing.Point(467, 7);
+            this.labelTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(83, 32);
+            this.labelTitle.Size = new System.Drawing.Size(67, 26);
             this.labelTitle.TabIndex = 2;
             this.labelTitle.Text = "Form";
             // 
             // groupBoxSeats
             // 
             this.groupBoxSeats.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxSeats.Location = new System.Drawing.Point(21, 76);
+            this.groupBoxSeats.Location = new System.Drawing.Point(16, 62);
+            this.groupBoxSeats.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBoxSeats.Name = "groupBoxSeats";
-            this.groupBoxSeats.Size = new System.Drawing.Size(946, 524);
+            this.groupBoxSeats.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxSeats.Size = new System.Drawing.Size(710, 426);
             this.groupBoxSeats.TabIndex = 3;
             this.groupBoxSeats.TabStop = false;
             this.groupBoxSeats.Text = "Seats Avaliable";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1283, 612);
+            this.ClientSize = new System.Drawing.Size(962, 497);
             this.Controls.Add(this.groupBoxSeats);
             this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.listBoxUnable);
             this.Controls.Add(this.listBoxAble);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "App";
             this.Load += new System.EventHandler(this.Form1_Load);
