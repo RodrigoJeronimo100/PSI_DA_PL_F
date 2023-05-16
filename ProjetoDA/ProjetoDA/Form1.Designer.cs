@@ -51,7 +51,6 @@
             this.listBoxUnable.Name = "listBoxUnable";
             this.listBoxUnable.Size = new System.Drawing.Size(110, 420);
             this.listBoxUnable.TabIndex = 1;
-            this.listBoxUnable.SelectedIndexChanged += new System.EventHandler(this.listBoxUnable_SelectedIndexChanged);
             // 
             // labelTitle
             // 
