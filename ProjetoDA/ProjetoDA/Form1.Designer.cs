@@ -42,7 +42,7 @@
             this.listBoxAble.Name = "listBoxAble";
             this.listBoxAble.Size = new System.Drawing.Size(146, 516);
             this.listBoxAble.TabIndex = 0;
-            this.listBoxAble.SelectedIndexChanged += new System.EventHandler(this.listBoxAble_SelectedIndexChanged);
+            
             // 
             // listBoxUnable
             // 
