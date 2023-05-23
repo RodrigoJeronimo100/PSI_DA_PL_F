@@ -163,12 +163,13 @@
             // button_login
             // 
             this.button_login.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button_login.BackgroundImage = global::ProjetoDA.Properties.Resources.login;
+            this.button_login.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_login.Location = new System.Drawing.Point(814, 14);
+            this.button_login.Location = new System.Drawing.Point(896, 20);
             this.button_login.Name = "button_login";
-            this.button_login.Size = new System.Drawing.Size(116, 27);
+            this.button_login.Size = new System.Drawing.Size(34, 27);
             this.button_login.TabIndex = 9;
-            this.button_login.Text = "Login";
             this.button_login.UseVisualStyleBackColor = false;
             this.button_login.Click += new System.EventHandler(this.button_login_Click);
             // 
