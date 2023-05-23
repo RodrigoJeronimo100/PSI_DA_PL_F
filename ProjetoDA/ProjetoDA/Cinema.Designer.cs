@@ -1,6 +1,6 @@
 ﻿namespace ProjetoDA
 {
-    partial class Form1
+    partial class Cinema
     {
         /// <summary>
         /// Required designer variable.

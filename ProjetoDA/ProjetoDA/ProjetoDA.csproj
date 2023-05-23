@@ -52,6 +52,12 @@
     <Compile Include="Filme.Designer.cs">
       <DependentUpon>Filme.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cinema.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cinema.Designer.cs">
+      <DependentUpon>Cinema.cs</DependentUpon>
+    </Compile>
     <Compile Include="Funcionarios.cs">
       <SubType>Form</SubType>
     </Compile>

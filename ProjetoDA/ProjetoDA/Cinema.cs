@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProjetoDA
 {
-    public partial class Form1 : Form
+    public partial class Cinema : Form
     {
-        public Form1()
+        public Cinema()
         {
             InitializeComponent();
         }
