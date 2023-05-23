@@ -13,6 +13,7 @@ namespace ProjetoDA
     public partial class Principal : Form
     {
         private Funcionarios formFuncionarios;
+        private Login formLogin;
         public Principal()
         {
             InitializeComponent();
@@ -32,8 +33,16 @@ namespace ProjetoDA
                 formFuncionarios.FormClosed += (s, args) => formFuncionarios = null; 
                 formFuncionarios.Show();
             }
- 
+        }
 
+        private void button_login_Click(object sender, EventArgs e)
+        {
+            if (formLogin == null)
+            {
+                formLogin = new Login();
+                formLogin.FormClosed += (s, args) => formLogin = null;
+                formLogin.Show();
+            }
         }
     }
 }

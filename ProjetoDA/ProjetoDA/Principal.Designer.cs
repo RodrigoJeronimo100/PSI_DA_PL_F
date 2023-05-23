@@ -38,7 +38,8 @@
             this.button_sessoes = new System.Windows.Forms.Button();
             this.button_filmes = new System.Windows.Forms.Button();
             this.button_func = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button_cinema = new System.Windows.Forms.Button();
+            this.button_login = new System.Windows.Forms.Button();
             this.groupBoxSeats.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -50,7 +51,7 @@
             this.listBox_filmesdia.Location = new System.Drawing.Point(19, 118);
             this.listBox_filmesdia.Margin = new System.Windows.Forms.Padding(2);
             this.listBox_filmesdia.Name = "listBox_filmesdia";
-            this.listBox_filmesdia.Size = new System.Drawing.Size(148, 344);
+            this.listBox_filmesdia.Size = new System.Drawing.Size(148, 378);
             this.listBox_filmesdia.TabIndex = 0;
             // 
             // labelTitle
@@ -67,31 +68,32 @@
             // 
             // groupBoxSeats
             // 
+            this.groupBoxSeats.Controls.Add(this.button_login);
             this.groupBoxSeats.Controls.Add(this.groupBox2);
             this.groupBoxSeats.Controls.Add(this.groupBox1);
             this.groupBoxSeats.Controls.Add(this.labelTitle);
             this.groupBoxSeats.Controls.Add(this.listBox_filmesdia);
             this.groupBoxSeats.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxSeats.Location = new System.Drawing.Point(11, 11);
+            this.groupBoxSeats.Location = new System.Drawing.Point(11, 3);
             this.groupBoxSeats.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxSeats.Name = "groupBoxSeats";
             this.groupBoxSeats.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBoxSeats.Size = new System.Drawing.Size(940, 477);
+            this.groupBoxSeats.Size = new System.Drawing.Size(940, 510);
             this.groupBoxSeats.TabIndex = 3;
             this.groupBoxSeats.TabStop = false;
             // 
             // groupBox2
             // 
-            this.groupBox2.Location = new System.Drawing.Point(176, 110);
+            this.groupBox2.Location = new System.Drawing.Point(172, 117);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(754, 352);
+            this.groupBox2.Size = new System.Drawing.Size(758, 377);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.button_cinema);
             this.groupBox1.Controls.Add(this.button_clientes);
             this.groupBox1.Controls.Add(this.button_sessoes);
             this.groupBox1.Controls.Add(this.button_filmes);
@@ -147,22 +149,34 @@
             this.button_func.UseVisualStyleBackColor = false;
             this.button_func.Click += new System.EventHandler(this.button_func_Click);
             // 
-            // button1
+            // button_cinema
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(414, 22);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(116, 27);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Cinema";
-            this.button1.UseVisualStyleBackColor = false;
+            this.button_cinema.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button_cinema.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_cinema.Location = new System.Drawing.Point(414, 22);
+            this.button_cinema.Name = "button_cinema";
+            this.button_cinema.Size = new System.Drawing.Size(116, 27);
+            this.button_cinema.TabIndex = 8;
+            this.button_cinema.Text = "Cinema";
+            this.button_cinema.UseVisualStyleBackColor = false;
+            // 
+            // button_login
+            // 
+            this.button_login.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_login.Location = new System.Drawing.Point(814, 14);
+            this.button_login.Name = "button_login";
+            this.button_login.Size = new System.Drawing.Size(116, 27);
+            this.button_login.TabIndex = 9;
+            this.button_login.Text = "Login";
+            this.button_login.UseVisualStyleBackColor = false;
+            this.button_login.Click += new System.EventHandler(this.button_login_Click);
             // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(962, 497);
+            this.ClientSize = new System.Drawing.Size(962, 519);
             this.Controls.Add(this.groupBoxSeats);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -187,7 +201,8 @@
         private System.Windows.Forms.Button button_filmes;
         private System.Windows.Forms.Button button_func;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button_cinema;
+        private System.Windows.Forms.Button button_login;
     }
 }
 
