@@ -14,6 +14,7 @@ namespace ProjetoDA
     {
         private Funcionarios formFuncionarios;
         private Login formLogin;
+        private Filme formFilme;
         public Principal()
         {
             InitializeComponent();
@@ -42,6 +43,16 @@ namespace ProjetoDA
                 formLogin = new Login();
                 formLogin.FormClosed += (s, args) => formLogin = null;
                 formLogin.Show();
+            }
+        }
+
+        private void button_filmes_Click(object sender, EventArgs e)
+        {
+            if (formFilme == null)
+            {
+                formFilme = new Filme();
+                formFilme.FormClosed += (s, args) => formFilme = null;
+                formFilme.Show();
             }
         }
     }
