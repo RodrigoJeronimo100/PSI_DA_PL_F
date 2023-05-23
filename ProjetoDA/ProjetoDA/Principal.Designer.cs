@@ -47,11 +47,11 @@
             // listBox_filmesdia
             // 
             this.listBox_filmesdia.FormattingEnabled = true;
-            this.listBox_filmesdia.ItemHeight = 20;
-            this.listBox_filmesdia.Location = new System.Drawing.Point(25, 145);
-            this.listBox_filmesdia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.listBox_filmesdia.ItemHeight = 17;
+            this.listBox_filmesdia.Location = new System.Drawing.Point(19, 118);
+            this.listBox_filmesdia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listBox_filmesdia.Name = "listBox_filmesdia";
-            this.listBox_filmesdia.Size = new System.Drawing.Size(196, 464);
+            this.listBox_filmesdia.Size = new System.Drawing.Size(148, 378);
             this.listBox_filmesdia.TabIndex = 0;
             // 
             // labelTitle
@@ -59,9 +59,10 @@
             this.labelTitle.AutoSize = true;
             this.labelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTitle.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelTitle.Location = new System.Drawing.Point(539, 22);
+            this.labelTitle.Location = new System.Drawing.Point(404, 18);
+            this.labelTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(172, 32);
+            this.labelTitle.Size = new System.Drawing.Size(137, 26);
             this.labelTitle.TabIndex = 2;
             this.labelTitle.Text = "Home Page";
             // 
@@ -73,11 +74,11 @@
             this.groupBoxSeats.Controls.Add(this.labelTitle);
             this.groupBoxSeats.Controls.Add(this.listBox_filmesdia);
             this.groupBoxSeats.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxSeats.Location = new System.Drawing.Point(15, 4);
-            this.groupBoxSeats.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBoxSeats.Location = new System.Drawing.Point(11, 3);
+            this.groupBoxSeats.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBoxSeats.Name = "groupBoxSeats";
-            this.groupBoxSeats.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBoxSeats.Size = new System.Drawing.Size(1253, 628);
+            this.groupBoxSeats.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxSeats.Size = new System.Drawing.Size(940, 510);
             this.groupBoxSeats.TabIndex = 3;
             this.groupBoxSeats.TabStop = false;
             // 
@@ -87,21 +88,18 @@
             this.button_login.BackgroundImage = global::ProjetoDA.Properties.Resources.login;
             this.button_login.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_login.Location = new System.Drawing.Point(1195, 25);
-            this.button_login.Margin = new System.Windows.Forms.Padding(4);
+            this.button_login.Location = new System.Drawing.Point(896, 20);
             this.button_login.Name = "button_login";
-            this.button_login.Size = new System.Drawing.Size(45, 33);
+            this.button_login.Size = new System.Drawing.Size(34, 27);
             this.button_login.TabIndex = 9;
             this.button_login.UseVisualStyleBackColor = false;
             this.button_login.Click += new System.EventHandler(this.button_login_Click);
             // 
             // groupBox2
             // 
-            this.groupBox2.Location = new System.Drawing.Point(229, 144);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Location = new System.Drawing.Point(172, 117);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(1011, 464);
+            this.groupBox2.Size = new System.Drawing.Size(758, 377);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             // 
@@ -113,11 +111,9 @@
             this.groupBox1.Controls.Add(this.button_sessoes);
             this.groupBox1.Controls.Add(this.button_filmes);
             this.groupBox1.Controls.Add(this.button_func);
-            this.groupBox1.Location = new System.Drawing.Point(25, 58);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Location = new System.Drawing.Point(19, 47);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(1216, 81);
+            this.groupBox1.Size = new System.Drawing.Size(912, 66);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             // 
@@ -125,10 +121,9 @@
             // 
             this.button_cinema.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button_cinema.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_cinema.Location = new System.Drawing.Point(552, 27);
-            this.button_cinema.Margin = new System.Windows.Forms.Padding(4);
+            this.button_cinema.Location = new System.Drawing.Point(414, 22);
             this.button_cinema.Name = "button_cinema";
-            this.button_cinema.Size = new System.Drawing.Size(155, 33);
+            this.button_cinema.Size = new System.Drawing.Size(116, 27);
             this.button_cinema.TabIndex = 8;
             this.button_cinema.Text = "Cinema";
             this.button_cinema.UseVisualStyleBackColor = false;
@@ -138,34 +133,33 @@
             // 
             this.button_clientes.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button_clientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_clientes.Location = new System.Drawing.Point(877, 27);
-            this.button_clientes.Margin = new System.Windows.Forms.Padding(4);
+            this.button_clientes.Location = new System.Drawing.Point(658, 22);
             this.button_clientes.Name = "button_clientes";
-            this.button_clientes.Size = new System.Drawing.Size(155, 33);
+            this.button_clientes.Size = new System.Drawing.Size(116, 27);
             this.button_clientes.TabIndex = 7;
             this.button_clientes.Text = "Clientes";
             this.button_clientes.UseVisualStyleBackColor = false;
+            this.button_clientes.Click += new System.EventHandler(this.button_clientes_Click);
             // 
             // button_sessoes
             // 
             this.button_sessoes.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button_sessoes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_sessoes.Location = new System.Drawing.Point(715, 27);
-            this.button_sessoes.Margin = new System.Windows.Forms.Padding(4);
+            this.button_sessoes.Location = new System.Drawing.Point(536, 22);
             this.button_sessoes.Name = "button_sessoes";
-            this.button_sessoes.Size = new System.Drawing.Size(155, 33);
+            this.button_sessoes.Size = new System.Drawing.Size(116, 27);
             this.button_sessoes.TabIndex = 6;
             this.button_sessoes.Text = "Sessões";
             this.button_sessoes.UseVisualStyleBackColor = false;
+            this.button_sessoes.Click += new System.EventHandler(this.button_sessoes_Click);
             // 
             // button_filmes
             // 
             this.button_filmes.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button_filmes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_filmes.Location = new System.Drawing.Point(389, 27);
-            this.button_filmes.Margin = new System.Windows.Forms.Padding(4);
+            this.button_filmes.Location = new System.Drawing.Point(292, 22);
             this.button_filmes.Name = "button_filmes";
-            this.button_filmes.Size = new System.Drawing.Size(155, 33);
+            this.button_filmes.Size = new System.Drawing.Size(116, 27);
             this.button_filmes.TabIndex = 5;
             this.button_filmes.Text = "Filmes";
             this.button_filmes.UseVisualStyleBackColor = false;
@@ -175,10 +169,9 @@
             // 
             this.button_func.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button_func.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_func.Location = new System.Drawing.Point(227, 27);
-            this.button_func.Margin = new System.Windows.Forms.Padding(4);
+            this.button_func.Location = new System.Drawing.Point(170, 22);
             this.button_func.Name = "button_func";
-            this.button_func.Size = new System.Drawing.Size(155, 33);
+            this.button_func.Size = new System.Drawing.Size(116, 27);
             this.button_func.TabIndex = 4;
             this.button_func.Text = "Funcionários";
             this.button_func.UseVisualStyleBackColor = false;
@@ -186,12 +179,12 @@
             // 
             // Principal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1283, 639);
+            this.ClientSize = new System.Drawing.Size(962, 519);
             this.Controls.Add(this.groupBoxSeats);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Principal";
             this.Text = "Cinema";
             this.Load += new System.EventHandler(this.Form1_Load);

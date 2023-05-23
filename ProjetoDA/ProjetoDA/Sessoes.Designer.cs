@@ -1,6 +1,6 @@
 ﻿namespace ProjetoDA
 {
-    partial class Funcionarios
+    partial class Sessoes
     {
         /// <summary>
         /// Required designer variable.
@@ -28,18 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Funcionarios));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sessoes));
             this.SuspendLayout();
             // 
-            // Funcionarios
+            // Sessoes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Funcionarios";
-            this.Text = "Funcionarios";
-            this.Load += new System.EventHandler(this.Funcionarios_Load);
+            this.Name = "Sessoes";
+            this.Text = "Sessoes";
             this.ResumeLayout(false);
 
         }

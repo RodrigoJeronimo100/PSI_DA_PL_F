@@ -16,6 +16,8 @@ namespace ProjetoDA
         private Login formLogin;
         private Filme formFilme;
         private Cinema formCinema;
+        private Sessoes formSessoes;
+        private Clientes formClientes;
         public Principal()
         {
             InitializeComponent();
@@ -64,6 +66,26 @@ namespace ProjetoDA
                 formCinema = new Cinema();
                 formCinema.FormClosed += (s, args) => formFilme = null;
                 formCinema.Show();
+            }
+        }
+
+        private void button_sessoes_Click(object sender, EventArgs e)
+        {
+            if (formSessoes == null)
+            {
+                formSessoes = new Sessoes();
+                formSessoes.FormClosed += (s, args) => formFilme = null;
+                formSessoes.Show();
+            }
+        }
+
+        private void button_clientes_Click(object sender, EventArgs e)
+        {
+            if (formClientes == null)
+            {
+                formClientes = new Clientes();
+                formClientes.FormClosed += (s, args) => formFilme = null;
+                formClientes.Show();
             }
         }
     }
