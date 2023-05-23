@@ -38,6 +38,7 @@
             this.button_sessoes = new System.Windows.Forms.Button();
             this.button_filmes = new System.Windows.Forms.Button();
             this.button_func = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBoxSeats.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -57,12 +58,12 @@
             this.labelTitle.AutoSize = true;
             this.labelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTitle.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelTitle.Location = new System.Drawing.Point(419, 18);
+            this.labelTitle.Location = new System.Drawing.Point(404, 18);
             this.labelTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(67, 26);
+            this.labelTitle.Size = new System.Drawing.Size(137, 26);
             this.labelTitle.TabIndex = 2;
-            this.labelTitle.Text = "Form";
+            this.labelTitle.Text = "Home Page";
             // 
             // groupBoxSeats
             // 
@@ -90,6 +91,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.button_clientes);
             this.groupBox1.Controls.Add(this.button_sessoes);
             this.groupBox1.Controls.Add(this.button_filmes);
@@ -104,7 +106,7 @@
             // 
             this.button_clientes.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button_clientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_clientes.Location = new System.Drawing.Point(605, 22);
+            this.button_clientes.Location = new System.Drawing.Point(658, 22);
             this.button_clientes.Name = "button_clientes";
             this.button_clientes.Size = new System.Drawing.Size(116, 27);
             this.button_clientes.TabIndex = 7;
@@ -115,7 +117,7 @@
             // 
             this.button_sessoes.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button_sessoes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_sessoes.Location = new System.Drawing.Point(483, 22);
+            this.button_sessoes.Location = new System.Drawing.Point(536, 22);
             this.button_sessoes.Name = "button_sessoes";
             this.button_sessoes.Size = new System.Drawing.Size(116, 27);
             this.button_sessoes.TabIndex = 6;
@@ -126,7 +128,7 @@
             // 
             this.button_filmes.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button_filmes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_filmes.Location = new System.Drawing.Point(361, 22);
+            this.button_filmes.Location = new System.Drawing.Point(292, 22);
             this.button_filmes.Name = "button_filmes";
             this.button_filmes.Size = new System.Drawing.Size(116, 27);
             this.button_filmes.TabIndex = 5;
@@ -137,13 +139,24 @@
             // 
             this.button_func.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button_func.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_func.Location = new System.Drawing.Point(239, 22);
+            this.button_func.Location = new System.Drawing.Point(170, 22);
             this.button_func.Name = "button_func";
             this.button_func.Size = new System.Drawing.Size(116, 27);
             this.button_func.TabIndex = 4;
             this.button_func.Text = "Funcionários";
             this.button_func.UseVisualStyleBackColor = false;
             this.button_func.Click += new System.EventHandler(this.button_func_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(414, 22);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(116, 27);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Cinema";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // Principal
             // 
@@ -174,6 +187,7 @@
         private System.Windows.Forms.Button button_filmes;
         private System.Windows.Forms.Button button_func;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button button1;
     }
 }
 
