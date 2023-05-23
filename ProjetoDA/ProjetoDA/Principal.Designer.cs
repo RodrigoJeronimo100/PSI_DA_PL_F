@@ -88,7 +88,7 @@
             this.button_login.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_login.Location = new System.Drawing.Point(1195, 25);
-            this.button_login.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_login.Margin = new System.Windows.Forms.Padding(4);
             this.button_login.Name = "button_login";
             this.button_login.Size = new System.Drawing.Size(45, 33);
             this.button_login.TabIndex = 9;
@@ -98,9 +98,9 @@
             // groupBox2
             // 
             this.groupBox2.Location = new System.Drawing.Point(229, 144);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(1011, 464);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
@@ -114,9 +114,9 @@
             this.groupBox1.Controls.Add(this.button_filmes);
             this.groupBox1.Controls.Add(this.button_func);
             this.groupBox1.Location = new System.Drawing.Point(25, 58);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(1216, 81);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
@@ -126,19 +126,20 @@
             this.button_cinema.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button_cinema.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_cinema.Location = new System.Drawing.Point(552, 27);
-            this.button_cinema.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_cinema.Margin = new System.Windows.Forms.Padding(4);
             this.button_cinema.Name = "button_cinema";
             this.button_cinema.Size = new System.Drawing.Size(155, 33);
             this.button_cinema.TabIndex = 8;
             this.button_cinema.Text = "Cinema";
             this.button_cinema.UseVisualStyleBackColor = false;
+            this.button_cinema.Click += new System.EventHandler(this.button_cinema_Click);
             // 
             // button_clientes
             // 
             this.button_clientes.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button_clientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_clientes.Location = new System.Drawing.Point(877, 27);
-            this.button_clientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_clientes.Margin = new System.Windows.Forms.Padding(4);
             this.button_clientes.Name = "button_clientes";
             this.button_clientes.Size = new System.Drawing.Size(155, 33);
             this.button_clientes.TabIndex = 7;
@@ -150,7 +151,7 @@
             this.button_sessoes.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button_sessoes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_sessoes.Location = new System.Drawing.Point(715, 27);
-            this.button_sessoes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_sessoes.Margin = new System.Windows.Forms.Padding(4);
             this.button_sessoes.Name = "button_sessoes";
             this.button_sessoes.Size = new System.Drawing.Size(155, 33);
             this.button_sessoes.TabIndex = 6;
@@ -162,7 +163,7 @@
             this.button_filmes.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button_filmes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_filmes.Location = new System.Drawing.Point(389, 27);
-            this.button_filmes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_filmes.Margin = new System.Windows.Forms.Padding(4);
             this.button_filmes.Name = "button_filmes";
             this.button_filmes.Size = new System.Drawing.Size(155, 33);
             this.button_filmes.TabIndex = 5;
@@ -175,7 +176,7 @@
             this.button_func.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button_func.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_func.Location = new System.Drawing.Point(227, 27);
-            this.button_func.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_func.Margin = new System.Windows.Forms.Padding(4);
             this.button_func.Name = "button_func";
             this.button_func.Size = new System.Drawing.Size(155, 33);
             this.button_func.TabIndex = 4;
