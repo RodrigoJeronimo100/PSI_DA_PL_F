@@ -16,5 +16,10 @@ namespace ProjetoDA
         {
             InitializeComponent();
         }
+
+        private void Funcionarios_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
