@@ -33,12 +33,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.textBoxMorada = new System.Windows.Forms.TextBox();
             this.textBoxNif = new System.Windows.Forms.TextBox();
             this.textBoxTelemovel = new System.Windows.Forms.TextBox();
             this.textBoxNome = new System.Windows.Forms.TextBox();
-            this.textBoxBilhetes = new System.Windows.Forms.TextBox();
             this.button_inserir_dados = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -86,23 +84,12 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Nif:";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(9, 270);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(177, 24);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Bilhetes Adquiridos:";
-            // 
             // textBoxMorada
             // 
             this.textBoxMorada.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxMorada.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxMorada.Location = new System.Drawing.Point(13, 172);
-            this.textBoxMorada.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxMorada.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxMorada.Multiline = true;
             this.textBoxMorada.Name = "textBoxMorada";
             this.textBoxMorada.Size = new System.Drawing.Size(222, 31);
@@ -113,7 +100,7 @@
             this.textBoxNif.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxNif.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNif.Location = new System.Drawing.Point(13, 110);
-            this.textBoxNif.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxNif.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxNif.Multiline = true;
             this.textBoxNif.Name = "textBoxNif";
             this.textBoxNif.Size = new System.Drawing.Size(222, 30);
@@ -124,7 +111,7 @@
             this.textBoxTelemovel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxTelemovel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxTelemovel.Location = new System.Drawing.Point(13, 235);
-            this.textBoxTelemovel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxTelemovel.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxTelemovel.Multiline = true;
             this.textBoxTelemovel.Name = "textBoxTelemovel";
             this.textBoxTelemovel.Size = new System.Drawing.Size(222, 31);
@@ -135,26 +122,15 @@
             this.textBoxNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNome.Location = new System.Drawing.Point(13, 49);
-            this.textBoxNome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxNome.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxNome.Multiline = true;
             this.textBoxNome.Name = "textBoxNome";
             this.textBoxNome.Size = new System.Drawing.Size(222, 29);
             this.textBoxNome.TabIndex = 8;
             // 
-            // textBoxBilhetes
-            // 
-            this.textBoxBilhetes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxBilhetes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxBilhetes.Location = new System.Drawing.Point(13, 298);
-            this.textBoxBilhetes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBoxBilhetes.Multiline = true;
-            this.textBoxBilhetes.Name = "textBoxBilhetes";
-            this.textBoxBilhetes.Size = new System.Drawing.Size(222, 32);
-            this.textBoxBilhetes.TabIndex = 9;
-            // 
             // button_inserir_dados
             // 
-            this.button_inserir_dados.Location = new System.Drawing.Point(13, 337);
+            this.button_inserir_dados.Location = new System.Drawing.Point(13, 273);
             this.button_inserir_dados.Name = "button_inserir_dados";
             this.button_inserir_dados.Size = new System.Drawing.Size(98, 30);
             this.button_inserir_dados.TabIndex = 10;
@@ -168,19 +144,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.button_inserir_dados);
-            this.Controls.Add(this.textBoxBilhetes);
             this.Controls.Add(this.textBoxNome);
             this.Controls.Add(this.textBoxTelemovel);
             this.Controls.Add(this.textBoxNif);
             this.Controls.Add(this.textBoxMorada);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Clientes";
             this.Text = "Clientes";
             this.ResumeLayout(false);
@@ -194,12 +168,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBoxMorada;
         private System.Windows.Forms.TextBox textBoxNif;
         private System.Windows.Forms.TextBox textBoxTelemovel;
         private System.Windows.Forms.TextBox textBoxNome;
-        private System.Windows.Forms.TextBox textBoxBilhetes;
         private System.Windows.Forms.Button button_inserir_dados;
     }
 }
