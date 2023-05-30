@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace ProjetoDA
 {
-    public partial class Funcionarios : Form
+    public partial class FormSessoes : Form
     {
-        public Funcionarios()
+        public FormSessoes()
         {
             InitializeComponent();
-        }
-
-        private void Funcionarios_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
