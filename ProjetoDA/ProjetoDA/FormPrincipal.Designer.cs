@@ -1,6 +1,6 @@
 ﻿namespace ProjetoDA
 {
-    partial class Principal
+    partial class FormPrincipal
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
             this.listBox_filmesdia = new System.Windows.Forms.ListBox();
             this.labelTitle = new System.Windows.Forms.Label();
             this.groupBoxSeats = new System.Windows.Forms.GroupBox();

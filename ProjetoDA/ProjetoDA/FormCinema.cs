@@ -10,13 +10,15 @@ using System.Windows.Forms;
 
 namespace ProjetoDA
 {
-    public partial class Cinema : Form
+    public partial class FormCinema : Form
     {
-        public Cinema()
+        private FormSala1 formSala1;
+        public FormCinema()
         {
             InitializeComponent();
         }
 
+<<<<<<< HEAD
         private void textBoxNome_TextChanged(object sender, EventArgs e)
         {
 
@@ -30,6 +32,17 @@ namespace ProjetoDA
         private void Sessoes_Load(object sender, EventArgs e)
         {
 
+=======
+        private void sala1ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            if (formSala1 == null)
+            {
+                formSala1 = new FormSala1();
+                formSala1.FormClosed += (s, args) => formSala1 = null;
+                formSala1.Show();
+            }
+>>>>>>> daf9c705247cd2961cae5ceaa4e022806ba3c3cc
         }
     }
 }
