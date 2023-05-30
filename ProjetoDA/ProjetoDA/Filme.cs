@@ -16,5 +16,10 @@ namespace ProjetoDA
         {
             InitializeComponent();
         }
+
+        private void Filme_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

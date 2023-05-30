@@ -29,7 +29,7 @@ namespace ProjetoDA
             string nif = textBoxNif.Text;
             if (nif.Length != 9)
             {
-                MessageBox.Show("O formato do Nif é invalido bbbb");
+                MessageBox.Show("O formato do Nif é invalido");
                 return;
             }
 
@@ -45,9 +45,35 @@ namespace ProjetoDA
             }
             catch (FormatException)
             {
-                MessageBox.Show("O formato de Nif é invalido ");
+                MessageBox.Show("O formato de Nif é invalido");
                 return;
             }
+
+            string telemovel = textBoxTelemovel.Text;
+            int telemovel_int = 0;
+            try
+            {
+                telemovel_int = int.Parse(telemovel);
+
+                if (telemovel_int < 910000000 || telemovel_int > 939999999 && telemovel_int < 960000000 || telemovel_int > 969999999)
+                {
+                    throw new IndexOutOfRangeException();
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Numero de telemovel invalido");
+            }
+        }
+
+        private void Clientes_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxTelemovel_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }
