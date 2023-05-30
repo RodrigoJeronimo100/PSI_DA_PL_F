@@ -33,12 +33,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.textBoxMorada = new System.Windows.Forms.TextBox();
             this.textBoxNif = new System.Windows.Forms.TextBox();
             this.textBoxTelemovel = new System.Windows.Forms.TextBox();
             this.textBoxNome = new System.Windows.Forms.TextBox();
-            this.textBoxBilhetes = new System.Windows.Forms.TextBox();
             this.button_inserir_dados = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -86,6 +84,7 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Nif:";
             // 
+<<<<<<< HEAD
             // label5
             // 
             this.label5.AutoSize = true;
@@ -97,6 +96,8 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Bilhetes Adquiridos:";
             // 
+=======
+>>>>>>> 8ac2e9891212989965e28212671978800c3d42b0
             // textBoxMorada
             // 
             this.textBoxMorada.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -142,6 +143,7 @@
             this.textBoxNome.Size = new System.Drawing.Size(222, 29);
             this.textBoxNome.TabIndex = 8;
             // 
+<<<<<<< HEAD
             // textBoxBilhetes
             // 
             this.textBoxBilhetes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -153,9 +155,11 @@
             this.textBoxBilhetes.Size = new System.Drawing.Size(222, 32);
             this.textBoxBilhetes.TabIndex = 9;
             // 
+=======
+>>>>>>> 8ac2e9891212989965e28212671978800c3d42b0
             // button_inserir_dados
             // 
-            this.button_inserir_dados.Location = new System.Drawing.Point(13, 337);
+            this.button_inserir_dados.Location = new System.Drawing.Point(13, 273);
             this.button_inserir_dados.Name = "button_inserir_dados";
             this.button_inserir_dados.Size = new System.Drawing.Size(98, 30);
             this.button_inserir_dados.TabIndex = 10;
@@ -169,12 +173,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.button_inserir_dados);
-            this.Controls.Add(this.textBoxBilhetes);
             this.Controls.Add(this.textBoxNome);
             this.Controls.Add(this.textBoxTelemovel);
             this.Controls.Add(this.textBoxNif);
             this.Controls.Add(this.textBoxMorada);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -196,12 +198,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBoxMorada;
         private System.Windows.Forms.TextBox textBoxNif;
         private System.Windows.Forms.TextBox textBoxTelemovel;
         private System.Windows.Forms.TextBox textBoxNome;
-        private System.Windows.Forms.TextBox textBoxBilhetes;
         private System.Windows.Forms.Button button_inserir_dados;
     }
 }
