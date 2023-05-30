@@ -10,11 +10,23 @@ using System.Windows.Forms;
 
 namespace ProjetoDA
 {
-    public partial class Cinema : Form
+    public partial class FormCinema : Form
     {
-        public Cinema()
+        private FormSala1 formSala1;
+        public FormCinema()
         {
             InitializeComponent();
+        }
+
+        private void sala1ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            if (formSala1 == null)
+            {
+                formSala1 = new FormSala1();
+                formSala1.FormClosed += (s, args) => formSala1 = null;
+                formSala1.Show();
+            }
         }
     }
 }

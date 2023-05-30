@@ -63,67 +63,76 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Clientes.cs">
+    <Compile Include="Cinema.cs" />
+    <Compile Include="Clientes.cs" />
+    <Compile Include="FormClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Clientes.Designer.cs">
-      <DependentUpon>Clientes.cs</DependentUpon>
+    <Compile Include="FormClientes.Designer.cs">
+      <DependentUpon>FormClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Filme.cs">
+    <Compile Include="FormFilme.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Filme.Designer.cs">
-      <DependentUpon>Filme.cs</DependentUpon>
+    <Compile Include="FormFilme.Designer.cs">
+      <DependentUpon>FormFilme.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cinema.cs">
+    <Compile Include="FormCinema.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cinema.Designer.cs">
-      <DependentUpon>Cinema.cs</DependentUpon>
+    <Compile Include="FormCinema.Designer.cs">
+      <DependentUpon>FormCinema.cs</DependentUpon>
     </Compile>
-    <Compile Include="Funcionarios.cs">
+    <Compile Include="Funcionario.cs" />
+    <Compile Include="FormFuncionarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Funcionarios.Designer.cs">
-      <DependentUpon>Funcionarios.cs</DependentUpon>
+    <Compile Include="FormFuncionarios.Designer.cs">
+      <DependentUpon>FormFuncionarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
+    <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Principal.cs">
+    <Compile Include="FormPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Principal.Designer.cs">
-      <DependentUpon>Principal.cs</DependentUpon>
+    <Compile Include="FormPrincipal.Designer.cs">
+      <DependentUpon>FormPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sessoes.cs">
+    <Compile Include="FormSessoes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sessoes.Designer.cs">
-      <DependentUpon>Sessoes.cs</DependentUpon>
+    <Compile Include="FormSessoes.Designer.cs">
+      <DependentUpon>FormSessoes.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Cinema.resx">
-      <DependentUpon>Cinema.cs</DependentUpon>
+    <Compile Include="FormSala1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSala1.Designer.cs">
+      <DependentUpon>FormSala1.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormCinema.resx">
+      <DependentUpon>FormCinema.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Clientes.resx">
-      <DependentUpon>Clientes.cs</DependentUpon>
+    <EmbeddedResource Include="FormClientes.resx">
+      <DependentUpon>FormClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Filme.resx">
-      <DependentUpon>Filme.cs</DependentUpon>
+    <EmbeddedResource Include="FormFilme.resx">
+      <DependentUpon>FormFilme.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Funcionarios.resx">
-      <DependentUpon>Funcionarios.cs</DependentUpon>
+    <EmbeddedResource Include="FormFuncionarios.resx">
+      <DependentUpon>FormFuncionarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Principal.resx">
-      <DependentUpon>Principal.cs</DependentUpon>
+    <EmbeddedResource Include="FormPrincipal.resx">
+      <DependentUpon>FormPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -135,8 +144,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Sessoes.resx">
-      <DependentUpon>Sessoes.cs</DependentUpon>
+    <EmbeddedResource Include="FormSessoes.resx">
+      <DependentUpon>FormSessoes.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -153,15 +162,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\login.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Base de Dados.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Base de Dados_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>Base de Dados.mdf</DependentUpon>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.8">

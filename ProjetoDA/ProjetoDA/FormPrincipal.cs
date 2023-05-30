@@ -10,15 +10,15 @@ using System.Windows.Forms;
 
 namespace ProjetoDA
 {
-    public partial class Principal : Form
+    public partial class FormPrincipal : Form
     {
-        private Funcionarios formFuncionarios;
-        private Login formLogin;
-        private Filme formFilme;
-        private Cinema formCinema;
-        private Sessoes formSessoes;
-        private Clientes formClientes;
-        public Principal()
+        private FormFuncionarios formFuncionarios;
+        private FormLogin formLogin;
+        private FormFilme formFilme;
+        private FormCinema formCinema;
+        private FormSessoes formSessoes;
+        private FormClientes formClientes;
+        public FormPrincipal()
         {
             InitializeComponent();
         }
@@ -33,7 +33,7 @@ namespace ProjetoDA
 
             if (formFuncionarios == null)
             {
-                formFuncionarios = new Funcionarios();
+                formFuncionarios = new FormFuncionarios();
                 formFuncionarios.FormClosed += (s, args) => formFuncionarios = null; 
                 formFuncionarios.Show();
             }
@@ -43,7 +43,7 @@ namespace ProjetoDA
         {
             if (formLogin == null)
             {
-                formLogin = new Login();
+                formLogin = new FormLogin();
                 formLogin.FormClosed += (s, args) => formLogin = null;
                 formLogin.Show();
             }
@@ -53,7 +53,7 @@ namespace ProjetoDA
         {
             if (formFilme == null)
             {
-                formFilme = new Filme();
+                formFilme = new FormFilme();
                 formFilme.FormClosed += (s, args) => formFilme = null;
                 formFilme.Show();
             }
@@ -63,7 +63,7 @@ namespace ProjetoDA
         {
             if (formCinema == null)
             {
-                formCinema = new Cinema();
+                formCinema = new FormCinema();
                 formCinema.FormClosed += (s, args) => formFilme = null;
                 formCinema.Show();
             }
@@ -73,7 +73,7 @@ namespace ProjetoDA
         {
             if (formSessoes == null)
             {
-                formSessoes = new Sessoes();
+                formSessoes = new FormSessoes();
                 formSessoes.FormClosed += (s, args) => formFilme = null;
                 formSessoes.Show();
             }
@@ -83,7 +83,7 @@ namespace ProjetoDA
         {
             if (formClientes == null)
             {
-                formClientes = new Clientes();
+                formClientes = new FormClientes();
                 formClientes.FormClosed += (s, args) => formFilme = null;
                 formClientes.Show();
             }
