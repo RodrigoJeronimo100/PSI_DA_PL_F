@@ -35,7 +35,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.button_entrar = new System.Windows.Forms.Button();
             this.button_sair = new System.Windows.Forms.Button();
-            this.button_criar = new System.Windows.Forms.Button();
             this.textBox_utilizador = new System.Windows.Forms.TextBox();
             this.textBox_password = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -88,26 +87,18 @@
             this.button_entrar.TabIndex = 4;
             this.button_entrar.Text = "Entrar";
             this.button_entrar.UseVisualStyleBackColor = true;
+            this.button_entrar.Click += new System.EventHandler(this.button_entrar_Click);
             // 
             // button_sair
             // 
             this.button_sair.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_sair.Location = new System.Drawing.Point(395, 223);
+            this.button_sair.Location = new System.Drawing.Point(322, 223);
             this.button_sair.Name = "button_sair";
             this.button_sair.Size = new System.Drawing.Size(78, 36);
             this.button_sair.TabIndex = 5;
             this.button_sair.Text = "Sair";
             this.button_sair.UseVisualStyleBackColor = true;
-            // 
-            // button_criar
-            // 
-            this.button_criar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_criar.Location = new System.Drawing.Point(311, 223);
-            this.button_criar.Name = "button_criar";
-            this.button_criar.Size = new System.Drawing.Size(78, 36);
-            this.button_criar.TabIndex = 6;
-            this.button_criar.Text = "Criar";
-            this.button_criar.UseVisualStyleBackColor = true;
+            this.button_sair.Click += new System.EventHandler(this.button_sair_Click);
             // 
             // textBox_utilizador
             // 
@@ -134,18 +125,16 @@
             this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.textBox_password);
             this.Controls.Add(this.textBox_utilizador);
-            this.Controls.Add(this.button_criar);
             this.Controls.Add(this.button_sair);
             this.Controls.Add(this.button_entrar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.pictureBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Login";
             this.Text = "Login";
-            this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -160,7 +149,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button_entrar;
         private System.Windows.Forms.Button button_sair;
-        private System.Windows.Forms.Button button_criar;
         private System.Windows.Forms.TextBox textBox_utilizador;
         private System.Windows.Forms.TextBox textBox_password;
     }
