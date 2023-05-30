@@ -16,5 +16,20 @@ namespace ProjetoDA
         {
             InitializeComponent();
         }
+
+        private void textBoxNome_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Sessoes_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
