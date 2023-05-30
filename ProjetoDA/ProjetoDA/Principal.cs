@@ -88,5 +88,10 @@ namespace ProjetoDA
                 formClientes.Show();
             }
         }
+
+        private void button_sair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

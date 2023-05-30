@@ -26,7 +26,7 @@ namespace ProjetoDA
             string username = textBox_utilizador.Text;
             string password = textBox_password.Text;
 
-            if
+            //Falta acabar mas só se faz quando tivermos o servidor a funcionar
         }
     }
 }
