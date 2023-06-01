@@ -8,5 +8,11 @@ namespace ProjetoDA
 {
     internal class Cinema
     {
+        public string Nome { get; set; }
+        public string Morada { get; set; }
+        public string Email { get; set; }
+
+              
+    
     }
 }

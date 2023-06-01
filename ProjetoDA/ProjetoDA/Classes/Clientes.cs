@@ -8,5 +8,6 @@ namespace ProjetoDA
 {
     internal class Clientes
     {
+        //Adiconar public etc 
     }
 }

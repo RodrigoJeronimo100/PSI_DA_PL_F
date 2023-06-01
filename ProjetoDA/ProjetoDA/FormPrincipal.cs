@@ -64,7 +64,7 @@ namespace ProjetoDA
             if (formCinema == null)
             {
                 formCinema = new FormCinema();
-                formCinema.FormClosed += (s, args) => formFilme = null;
+                formCinema.FormClosed += (s, args) => formCinema = null;
                 formCinema.Show();
             }
         }
@@ -74,7 +74,7 @@ namespace ProjetoDA
             if (formSessoes == null)
             {
                 formSessoes = new FormSessoes();
-                formSessoes.FormClosed += (s, args) => formFilme = null;
+                formSessoes.FormClosed += (s, args) => formSessoes = null;
                 formSessoes.Show();
             }
         }
@@ -84,7 +84,7 @@ namespace ProjetoDA
             if (formClientes == null)
             {
                 formClientes = new FormClientes();
-                formClientes.FormClosed += (s, args) => formFilme = null;
+                formClientes.FormClosed += (s, args) => formClientes = null;
                 formClientes.Show();
             }
         }

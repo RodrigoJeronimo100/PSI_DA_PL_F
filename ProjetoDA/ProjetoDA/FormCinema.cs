@@ -12,41 +12,29 @@ namespace ProjetoDA
 {
     public partial class FormCinema : Form
     {
-        private FormSala1 formSala1;
+        private int contadorSalas = 1;
         public FormCinema()
         {
             InitializeComponent();
         }
-
-        private void textBoxNome_TextChanged(object sender, EventArgs e)
+        private void Cinema_Load(object sender, EventArgs e)
         {
 
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
+            TabPage novaSala = new TabPage("Sala " + contadorSalas);
+            tabControl1.TabPages.Add(novaSala);
+            contadorSalas++;
         }
 
-
-        private void sala1ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-
-            if (formSala1 == null)
+            if (tabControl1.TabPages.Count > 0)
             {
-                formSala1 = new formSala1();
-                formSala1.FormClosed += (s, args) => formSala1 = null;
-                formSala1.Show();
+                TabPage guiaSelecionada = tabControl1.SelectedTab;
+                tabControl1.TabPages.Remove(guiaSelecionada);
             }
-=======
-
-=======
->>>>>>> 53beb3271d317b543b26b58e35ec7a83b328997e
         }
->>>>>>> parent of 2951ab5 (1)
-=======
-
-        }
->>>>>>> parent of 2951ab5 (1)
     }
 }
