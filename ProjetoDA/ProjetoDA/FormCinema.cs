@@ -18,6 +18,7 @@ namespace ProjetoDA
         {
             InitializeComponent();
 <<<<<<< HEAD
+<<<<<<< HEAD
         }
         private void Cinema_Load(object sender, EventArgs e)
         {
@@ -63,6 +64,10 @@ namespace ProjetoDA
                 contadorSalas++;
             }
         }
+=======
+
+        }
+>>>>>>> parent of 2951ab5 (1)
 =======
 
         }
