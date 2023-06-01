@@ -22,6 +22,30 @@ namespace ProjetoDA
         private void Cinema_Load(object sender, EventArgs e)
         {
 
+<<<<<<< HEAD
+        private void textBoxNome_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void sala1ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            if (formSala1 == null)
+            {
+                formSala1 = new FormSala1();
+                formSala1.FormClosed += (s, args) => formSala1 = null;
+                formSala1.Show();
+            }
+
+=======
+>>>>>>> 53beb3271d317b543b26b58e35ec7a83b328997e
         }
 
         private int contadorSalas = 1;
