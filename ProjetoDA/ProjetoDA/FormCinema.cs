@@ -18,7 +18,6 @@ namespace ProjetoDA
             InitializeComponent();
         }
 
-<<<<<<< HEAD
         private void textBoxNome_TextChanged(object sender, EventArgs e)
         {
 
@@ -29,10 +28,7 @@ namespace ProjetoDA
 
         }
 
-        private void Sessoes_Load(object sender, EventArgs e)
-        {
 
-=======
         private void sala1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -42,7 +38,7 @@ namespace ProjetoDA
                 formSala1.FormClosed += (s, args) => formSala1 = null;
                 formSala1.Show();
             }
->>>>>>> daf9c705247cd2961cae5ceaa4e022806ba3c3cc
+
         }
     }
 }
