@@ -6,18 +6,19 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.Design.WebControls;
 using System.Windows.Forms;
 
 namespace ProjetoDA
 {
     public partial class FormCinema : Form
     {
-        private FormSala1 formSala1;
+ 
         public FormCinema()
         {
             InitializeComponent();
-        }
 
+<<<<<<< HEAD
         private void textBoxNome_TextChanged(object sender, EventArgs e)
         {
 
@@ -39,6 +40,8 @@ namespace ProjetoDA
                 formSala1.Show();
             }
 
+=======
+>>>>>>> 53beb3271d317b543b26b58e35ec7a83b328997e
         }
     }
 }
