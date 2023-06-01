@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.UI.Design.WebControls;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ProjetoDA
 {
@@ -18,6 +17,7 @@ namespace ProjetoDA
         public FormCinema()
         {
             InitializeComponent();
+<<<<<<< HEAD
         }
         private void Cinema_Load(object sender, EventArgs e)
         {
@@ -63,5 +63,9 @@ namespace ProjetoDA
                 contadorSalas++;
             }
         }
+=======
+
+        }
+>>>>>>> parent of 2951ab5 (1)
     }
 }
