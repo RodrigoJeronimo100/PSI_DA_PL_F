@@ -21,6 +21,7 @@ namespace ProjetoDA
         }
         private void Cinema_Load(object sender, EventArgs e)
         {
+<<<<<<< HEAD
         }
         private void textBoxNome_TextChanged(object sender, EventArgs e)
         {
@@ -42,6 +43,9 @@ namespace ProjetoDA
                 formSala1.FormClosed += (s, args) => formSala1 = null;
                 formSala1.Show();
             }
+=======
+
+>>>>>>> parent of bf77574 (Merge branch 'main' of https://github.com/RodrigoJeronimo100/PSI_DA_PL_F)
         }
 
         private int contadorSalas = 1;
