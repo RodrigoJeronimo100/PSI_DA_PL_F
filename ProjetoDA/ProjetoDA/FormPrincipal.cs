@@ -12,15 +12,22 @@ namespace ProjetoDA
 {
     public partial class FormPrincipal : Form
     {
+        ApplicationContext applicationContext;
+
         private FormFuncionarios formFuncionarios;
         private FormLogin formLogin;
         private FormFilme formFilme;
         private FormCinema formCinema;
         private FormSessoes formSessoes;
         private FormClientes formClientes;
+
+        List<Clientes> ListaClientes;
         public FormPrincipal()
         {
             InitializeComponent();
+            applicationContext = new ApplicationContext();
+
+            ListaClientes = new List<Clientes>();
         }
 
         private void Form1_Load(object sender, EventArgs e)

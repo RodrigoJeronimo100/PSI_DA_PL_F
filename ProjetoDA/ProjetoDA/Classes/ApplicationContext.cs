@@ -9,8 +9,9 @@ namespace ProjetoDA
 {
     internal class ApplicationContext : DbContext
     {
-        public Dbset<Salas> sala { get; set; }
+        internal object ClientesSet;
 
-        public Dbsey<Salas>
+        public DbSet <Clientes> clientes { get; set; }
+        
     }
 }

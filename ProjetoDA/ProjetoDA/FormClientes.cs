@@ -12,20 +12,28 @@ namespace ProjetoDA
 {
     public partial class FormClientes : Form
     {
+        ApplicationContext applicationContext;
+        List<Clientes> ListaClientes;
         public FormClientes()
         {
             InitializeComponent();
+            applicationContext = new ApplicationContext();
+
+            ListaClientes = new List<Clientes>();
+            atualizarListaClientes();
         }
 
         private void button_inserir_dados_Click(object sender, EventArgs e)
         {
             string nome = textBoxNome.Text;
-            if(nome.Length == 0)
+            if (nome.Length == 0)
             {
                 MessageBox.Show("O nome não pode ser vazio");
                 return;
             }
-            
+                        
+        
+
             string nif = textBoxNif.Text;
             if (nif.Length != 9)
             {
@@ -64,6 +72,36 @@ namespace ProjetoDA
             {
                 MessageBox.Show("Numero de telemovel invalido");
             }
+            foreach (Clientes clientes in ListaClientes)
+            {
+                if (clientes.Telemovel == telemovel_int)
+                {
+                    ListaClientes.Add(clientes);
+                    
+                    return;
+                }
+            }
+            Clientes novo_cliente = new Clientes(telemovel_int);
+            ListaClientes.Add(novo_cliente);
+            
+
+            try
+            {
+                applicationContext.SaveChanges();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Erro ao guardar um novo jogador!");
+                return;
+            }
+            atualizarListaClientes();
+        }
+
+        private void atualizarListaClientes()
+        {
+            listBox1.DataSource = null;
+            listBox1.DataSource = ListaClientes;
+
         }
 
         private void Clientes_Load(object sender, EventArgs e)

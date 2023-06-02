@@ -8,6 +8,21 @@ namespace ProjetoDA
 {
     internal class Clientes
     {
-        //Adiconar public etc 
+        public int Nome { get; set; }
+        public int Morada { get; set; }
+        public int Nif { get; set; }
+        public int Telemovel { get; set; }
+        public Clientes()
+        {
+
+        }
+        public Clientes(int telemovel)
+        {
+            Telemovel = telemovel;
+        }
+        public override string ToString()
+        {
+            return Telemovel.ToString() + ": ";
+        }
     }
 }

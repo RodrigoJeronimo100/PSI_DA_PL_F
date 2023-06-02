@@ -38,6 +38,7 @@
             this.textBoxTelemovel = new System.Windows.Forms.TextBox();
             this.textBoxNome = new System.Windows.Forms.TextBox();
             this.button_inserir_dados = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // label1
@@ -47,7 +48,7 @@
             this.label1.Location = new System.Drawing.Point(9, 21);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 29);
+            this.label1.Size = new System.Drawing.Size(67, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nome:";
             // 
@@ -58,7 +59,7 @@
             this.label2.Location = new System.Drawing.Point(9, 207);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(200, 29);
+            this.label2.Size = new System.Drawing.Size(157, 24);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nº de Telemóvel:";
             // 
@@ -69,7 +70,7 @@
             this.label3.Location = new System.Drawing.Point(9, 144);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 29);
+            this.label3.Size = new System.Drawing.Size(74, 24);
             this.label3.TabIndex = 2;
             this.label3.Text = "Morada";
             // 
@@ -80,11 +81,10 @@
             this.label4.Location = new System.Drawing.Point(9, 82);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 29);
+            this.label4.Size = new System.Drawing.Size(37, 24);
             this.label4.TabIndex = 3;
             this.label4.Text = "Nif:";
             // 
-
             // textBoxMorada
             // 
             this.textBoxMorada.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -130,7 +130,6 @@
             this.textBoxNome.Size = new System.Drawing.Size(222, 29);
             this.textBoxNome.TabIndex = 8;
             // 
-
             // button_inserir_dados
             // 
             this.button_inserir_dados.Location = new System.Drawing.Point(13, 273);
@@ -141,11 +140,21 @@
             this.button_inserir_dados.UseVisualStyleBackColor = true;
             this.button_inserir_dados.Click += new System.EventHandler(this.button_inserir_dados_Click);
             // 
-            // Clientes
+            // listBox1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(286, 37);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(734, 452);
+            this.listBox1.TabIndex = 11;
+            // 
+            // FormClientes
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button_inserir_dados);
             this.Controls.Add(this.textBoxNome);
             this.Controls.Add(this.textBoxTelemovel);
@@ -158,9 +167,9 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Clientes";
+            this.Name = "FormClientes";
             this.Text = "Clientes";
-            this.Load += new System.EventHandler(this.Clientes_Load);
+
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -177,5 +186,6 @@
         private System.Windows.Forms.TextBox textBoxTelemovel;
         private System.Windows.Forms.TextBox textBoxNome;
         private System.Windows.Forms.Button button_inserir_dados;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
