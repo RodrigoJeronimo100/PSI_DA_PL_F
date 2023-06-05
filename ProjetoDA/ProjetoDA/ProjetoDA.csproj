@@ -75,8 +75,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\ApplicationContext.cs" />
+    <Compile Include="Classes\Categoria.cs" />
     <Compile Include="Classes\Cinema.cs" />
     <Compile Include="Classes\Clientes.cs" />
+    <Compile Include="Classes\Sala.cs" />
     <Compile Include="FormClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +124,12 @@
     <Compile Include="FormSessoes.Designer.cs">
       <DependentUpon>FormSessoes.cs</DependentUpon>
     </Compile>
+    <Compile Include="teste.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="teste.Designer.cs">
+      <DependentUpon>teste.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FormCinema.resx">
       <DependentUpon>FormCinema.cs</DependentUpon>
     </EmbeddedResource>
@@ -152,6 +160,9 @@
     </Compile>
     <EmbeddedResource Include="FormSessoes.resx">
       <DependentUpon>FormSessoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="teste.resx">
+      <DependentUpon>teste.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
