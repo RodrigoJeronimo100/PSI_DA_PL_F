@@ -24,12 +24,8 @@ namespace ProjetoDA
             InitializeComponent();
             CarregarProgresso();
 
-            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
-<<<<<<< HEAD
+            comboBox2.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
 
-=======
-            
->>>>>>> 46a04e18455a353ddbad8e422d2808d9cf1beae9
         }
         private void Cinema_Load(object sender, EventArgs e)
         {
@@ -96,7 +92,7 @@ namespace ProjetoDA
             
         Sala novaSala = new Sala(nomeSala);
             salas.Add(novaSala);
-            comboBox1.Items.Add(nomeSala);
+            comboBox2.Items.Add(nomeSala);
 
             textBoxSalas.Clear();
             textBoxSalas.Focus();
@@ -104,11 +100,9 @@ namespace ProjetoDA
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-=======
-           
->>>>>>> 46a04e18455a353ddbad8e422d2808d9cf1beae9
-            string nomeSalaSelecionada = comboBox1.SelectedItem.ToString();
+
+
+            string nomeSalaSelecionada = comboBox2.SelectedItem.ToString();
             salaSelecionada = salas.FirstOrDefault(s => s.Nome == nomeSalaSelecionada);
 
             if (salaSelecionada != null)
@@ -159,36 +153,6 @@ namespace ProjetoDA
             MessageBox.Show($"As linhas e colunas foram adicionadas à sala: {salaSelecionada.Nome}");
         }
 
-        private void button_adicionarlinhas_Click(object sender, EventArgs e)
-        {
-            int linhas = int.Parse(textBoxlinhas.Text);
-            int colunas = int.Parse(textBoxcolunas.Text);
-
-            flowLayoutPanel1.Controls.Clear();
-
-            for (int i = 1; i <= linhas; i++)
-            {
-                for (int j = 1; j <= colunas; j++)
-                {
-                    Button button = new Button();
-                    button.Text = $"Sala {i}-{j}";
-                    flowLayoutPanel1.Controls.Add(button);
-                }
-            }
-        }
-
-        private void button_adicionarcolunas_Click(object sender, EventArgs e)
-        {
-            int colunas = int.Parse(textBoxcolunas.Text);
-
-            flowLayoutPanel1.Controls.Clear();
-
-            for (int i = 1; i <= colunas; i++)
-            {
-                Button button = new Button();
-                button.Text = $"Sala {i}";
-                flowLayoutPanel1.Controls.Add(button);
-            }
-        }
+       
     }
 }
