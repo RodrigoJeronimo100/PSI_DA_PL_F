@@ -36,9 +36,12 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.textBoxQuantidadeSalas = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.textBoxcolunas = new System.Windows.Forms.TextBox();
+            this.textBoxlinhas = new System.Windows.Forms.TextBox();
+            this.button_adicionarcolunas = new System.Windows.Forms.Button();
+            this.button_adicionarlinhas = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.SuspendLayout();
@@ -85,11 +88,14 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.button_adicionarlinhas);
+            this.tabPage2.Controls.Add(this.button_adicionarcolunas);
+            this.tabPage2.Controls.Add(this.textBoxlinhas);
+            this.tabPage2.Controls.Add(this.textBoxcolunas);
+            this.tabPage2.Controls.Add(this.flowLayoutPanel1);
             this.tabPage2.Controls.Add(this.textBoxQuantidadeSalas);
             this.tabPage2.Controls.Add(this.button4);
-            this.tabPage2.Controls.Add(this.button3);
             this.tabPage2.Controls.Add(this.comboBox1);
-            this.tabPage2.Controls.Add(this.listView1);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -100,49 +106,73 @@
             // 
             // textBoxQuantidadeSalas
             // 
-            this.textBoxQuantidadeSalas.Location = new System.Drawing.Point(26, 149);
+            this.textBoxQuantidadeSalas.Location = new System.Drawing.Point(26, 96);
+            this.textBoxQuantidadeSalas.Multiline = true;
             this.textBoxQuantidadeSalas.Name = "textBoxQuantidadeSalas";
             this.textBoxQuantidadeSalas.Size = new System.Drawing.Size(139, 20);
             this.textBoxQuantidadeSalas.TabIndex = 4;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(171, 173);
+            this.button4.Location = new System.Drawing.Point(171, 172);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(91, 23);
+            this.button4.Size = new System.Drawing.Size(106, 23);
             this.button4.TabIndex = 3;
             this.button4.Text = "Remover Sala";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(171, 149);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(91, 23);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Adicionar Salas";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(26, 175);
+            this.comboBox1.Location = new System.Drawing.Point(26, 174);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(139, 21);
             this.comboBox1.TabIndex = 1;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // listView1
+            // flowLayoutPanel1
             // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(296, 6);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(464, 367);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(299, 6);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(461, 367);
+            this.flowLayoutPanel1.TabIndex = 5;
+            // 
+            // textBoxcolunas
+            // 
+            this.textBoxcolunas.Location = new System.Drawing.Point(26, 148);
+            this.textBoxcolunas.Multiline = true;
+            this.textBoxcolunas.Name = "textBoxcolunas";
+            this.textBoxcolunas.Size = new System.Drawing.Size(139, 20);
+            this.textBoxcolunas.TabIndex = 6;
+            // 
+            // textBoxlinhas
+            // 
+            this.textBoxlinhas.Location = new System.Drawing.Point(26, 122);
+            this.textBoxlinhas.Multiline = true;
+            this.textBoxlinhas.Name = "textBoxlinhas";
+            this.textBoxlinhas.Size = new System.Drawing.Size(139, 20);
+            this.textBoxlinhas.TabIndex = 7;
+            // 
+            // button_adicionarcolunas
+            // 
+            this.button_adicionarcolunas.Location = new System.Drawing.Point(171, 146);
+            this.button_adicionarcolunas.Name = "button_adicionarcolunas";
+            this.button_adicionarcolunas.Size = new System.Drawing.Size(106, 23);
+            this.button_adicionarcolunas.TabIndex = 8;
+            this.button_adicionarcolunas.Text = "Adicionar Colunas";
+            this.button_adicionarcolunas.UseVisualStyleBackColor = true;
+            this.button_adicionarcolunas.Click += new System.EventHandler(this.button_adicionarcolunas_Click);
+            // 
+            // button_adicionarlinhas
+            // 
+            this.button_adicionarlinhas.Location = new System.Drawing.Point(171, 121);
+            this.button_adicionarlinhas.Name = "button_adicionarlinhas";
+            this.button_adicionarlinhas.Size = new System.Drawing.Size(106, 23);
+            this.button_adicionarlinhas.TabIndex = 9;
+            this.button_adicionarlinhas.Text = "Adicionar Linhas";
+            this.button_adicionarlinhas.UseVisualStyleBackColor = true;
+            this.button_adicionarlinhas.Click += new System.EventHandler(this.button_adicionarlinhas_Click);
             // 
             // FormCinema
             // 
@@ -170,9 +200,12 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.TextBox textBoxQuantidadeSalas;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Button button_adicionarlinhas;
+        private System.Windows.Forms.Button button_adicionarcolunas;
+        private System.Windows.Forms.TextBox textBoxlinhas;
+        private System.Windows.Forms.TextBox textBoxcolunas;
     }
 }

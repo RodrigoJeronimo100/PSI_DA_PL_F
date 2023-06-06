@@ -20,7 +20,7 @@ namespace ProjetoDA
             CarregarProgresso();
             
             comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
-            listView1.View = View.Details;
+            
         }
         private void Cinema_Load(object sender, EventArgs e)
         {
@@ -106,8 +106,7 @@ namespace ProjetoDA
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            listView1.Items.Clear(); 
-
+           
             string nomeSalaSelecionada = comboBox1.SelectedItem.ToString();
             
         }
@@ -117,6 +116,38 @@ namespace ProjetoDA
             if (tabControl1.SelectedIndex != -1)
             {
                 tabControl1.TabPages.RemoveAt(tabControl1.SelectedIndex);
+            }
+        }
+
+        private void button_adicionarlinhas_Click(object sender, EventArgs e)
+        {
+            int linhas = int.Parse(textBoxlinhas.Text);
+            int colunas = int.Parse(textBoxcolunas.Text);
+
+            flowLayoutPanel1.Controls.Clear();
+
+            for (int i = 1; i <= linhas; i++)
+            {
+                for (int j = 1; j <= colunas; j++)
+                {
+                    Button button = new Button();
+                    button.Text = $"Sala {i}-{j}";
+                    flowLayoutPanel1.Controls.Add(button);
+                }
+            }
+        }
+
+        private void button_adicionarcolunas_Click(object sender, EventArgs e)
+        {
+            int colunas = int.Parse(textBoxcolunas.Text);
+
+            flowLayoutPanel1.Controls.Clear();
+
+            for (int i = 1; i <= colunas; i++)
+            {
+                Button button = new Button();
+                button.Text = $"Sala {i}";
+                flowLayoutPanel1.Controls.Add(button);
             }
         }
     }
