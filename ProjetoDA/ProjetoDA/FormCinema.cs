@@ -109,39 +109,14 @@ namespace ProjetoDA
             listView1.Items.Clear(); 
 
             string nomeSalaSelecionada = comboBox1.SelectedItem.ToString();
-            int quantidadeCadeiras = ObterQuantidadeCadeiras(nomeSalaSelecionada); 
-            AdicionarCadeiras(nomeSalaSelecionada, quantidadeCadeiras);
+            
         }
-        private void AdicionarCadeiras(string nomeSala, int quantidadeCadeiras)
+
+        private void button2_Click_1(object sender, EventArgs e)
         {
-            listView1.Columns.Add(""); // Adicione uma coluna em branco para corresponder ao subitem em branco
-            listView1.Columns[0].Width = 200; // Defina o tamanho da primeira coluna (nome da sala)
-
-            ListViewItem salaItem = new ListViewItem(nomeSala);
-
-            salaItem.SubItems.Add(""); // Adicione uma subitem em branco para o alinhamento correto dos subitens
-
-            for (int i = 1; i <= quantidadeCadeiras; i++)
+            if (tabControl1.SelectedIndex != -1)
             {
-                ListViewItem.ListViewSubItem cadeiraItem = new ListViewItem.ListViewSubItem(salaItem, "Cadeira " + i);
-                salaItem.SubItems.Add(cadeiraItem);
-            }
-
-            listView1.Items.Add(salaItem);
-        }
-        private int ObterQuantidadeCadeiras(string nomeSala)
-        {
-            using (var contexto = new ApplicationContext())
-            {
-                var sala = contexto.Salas.FirstOrDefault(s => s.Nome == nomeSala);
-                if (sala != null)
-                {
-                    return sala.QuantidadeCadeiras;
-                }
-                else
-                {
-                    return 0; 
-                }
+                tabControl1.TabPages.RemoveAt(tabControl1.SelectedIndex);
             }
         }
     }
