@@ -14,7 +14,7 @@ namespace ProjetoDA
         
         
         public DbSet<Sala> Salas { get; set; }
-
+        public DbSet<Filmes> Filmes { get; set; }
         
     }
 }

@@ -10,10 +10,9 @@ namespace ProjetoDA.Classes
     {
         public string Nomefilme { get; set; }
 
-        //cria uma variavel para guardar o tempo
-
-
-        public int Duracao { get; set; }
-
+        public TimeSpan Duracao { get; set; }
+        // cria variel para o disponibilidade
+        public bool Ativo { get; set; }
+ 
     }
 }
