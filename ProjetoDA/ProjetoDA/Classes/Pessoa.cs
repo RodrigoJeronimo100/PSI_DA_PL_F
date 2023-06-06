@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ProjetoDA
 {
-    internal class Clientes
+    internal class Pessoa
     {
         [Key]
         public int ClienteId { get; set; }
@@ -16,11 +16,11 @@ namespace ProjetoDA
         public int Morada { get; set; }
         public int Nif { get; set; }
         public int Telemovel { get; set; }
-        public Clientes()
+        public Pessoa()
         {
 
         }
-        public Clientes(int telemovel)
+        public Pessoa(int telemovel)
         {
             Telemovel = telemovel;
         }

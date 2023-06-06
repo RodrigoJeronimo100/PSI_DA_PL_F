@@ -13,13 +13,13 @@ namespace ProjetoDA
     public partial class FormClientes : Form
     {
         ApplicationContext applicationContext;
-        List<Clientes> ListaClientes;
+        List<Pessoa> ListaClientes;
         public FormClientes()
         {
             InitializeComponent();
             applicationContext = new ApplicationContext();
 
-            ListaClientes = new List<Clientes>();
+            ListaClientes = new List<Pessoa>();
             atualizarListaClientes();
         }
 
@@ -72,7 +72,7 @@ namespace ProjetoDA
             {
                 MessageBox.Show("Numero de telemovel invalido");
             }
-            foreach (Clientes clientes in ListaClientes)
+            foreach (Pessoa clientes in ListaClientes)
             {
                 if (clientes.Telemovel == telemovel_int)
                 {
@@ -81,7 +81,7 @@ namespace ProjetoDA
                     return;
                 }
             }
-            Clientes novo_cliente = new Clientes(telemovel_int);
+            Pessoa novo_cliente = new Pessoa(telemovel_int);
             ListaClientes.Add(novo_cliente);
             
 

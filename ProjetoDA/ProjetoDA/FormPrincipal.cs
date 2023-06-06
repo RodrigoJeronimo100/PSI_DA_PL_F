@@ -21,13 +21,13 @@ namespace ProjetoDA
         private FormSessoes formSessoes;
         private FormClientes formClientes;
 
-        List<Clientes> ListaClientes;
+        List<Pessoa> ListaClientes;
         public FormPrincipal()
         {
             InitializeComponent();
             applicationContext = new ApplicationContext();
 
-            ListaClientes = new List<Clientes>();
+            ListaClientes = new List<Pessoa>();
         }
 
         private void Form1_Load(object sender, EventArgs e)
