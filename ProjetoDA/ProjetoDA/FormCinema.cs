@@ -1,30 +1,39 @@
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+    using ProjetoDA.Classes;
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel;
+    using System.Data;
+    using System.Drawing;
+    using System.IO;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+    using System.Windows.Forms;
 
 namespace ProjetoDA
 {
     public partial class FormCinema : Form
     {
         private int contadorSalas = 1;
+        
+        private List<Sala> salas = new List<Sala>();
+        private Sala salaSelecionada;
+
         public FormCinema()
         {
             InitializeComponent();
             CarregarProgresso();
-            
+
             comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+<<<<<<< HEAD
+
+=======
             
+>>>>>>> 46a04e18455a353ddbad8e422d2808d9cf1beae9
         }
         private void Cinema_Load(object sender, EventArgs e)
         {
-            
+
         }
 
 
@@ -35,7 +44,7 @@ namespace ProjetoDA
 
             contadorSalas++;
 
-            SalvarProgresso(); 
+            SalvarProgresso();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -74,49 +83,80 @@ namespace ProjetoDA
                 }
             }
         }
-
-        private int numeroUltimaSala = 0;
-
-        private void button3_Click(object sender, EventArgs e)
+        
+        private void buttonAdicionarSalas_Click(object sender, EventArgs e)
         {
-            int quantidadeSalas;
-            if (int.TryParse(textBoxQuantidadeSalas.Text, out quantidadeSalas))
-            {
-                for (int i = 1; i <= quantidadeSalas; i++)
-                {
-                    numeroUltimaSala++; 
-                    string nomeSala = "Sala " + numeroUltimaSala;
-                    comboBox1.Items.Add(nomeSala);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Digite um número válido de salas.");
-            }
-        }
+            string nomeSala = textBoxSalas.Text;
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            if (comboBox1.SelectedIndex != -1)
+            if (string.IsNullOrEmpty(nomeSala))
             {
-                string salaSelecionada = comboBox1.SelectedItem.ToString();
-                comboBox1.Items.Remove(salaSelecionada);
+                MessageBox.Show("Digite um nome para a sala.");
+                return;
             }
+            
+        Sala novaSala = new Sala(nomeSala);
+            salas.Add(novaSala);
+            comboBox1.Items.Add(nomeSala);
+
+            textBoxSalas.Clear();
+            textBoxSalas.Focus();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+<<<<<<< HEAD
+=======
            
+>>>>>>> 46a04e18455a353ddbad8e422d2808d9cf1beae9
             string nomeSalaSelecionada = comboBox1.SelectedItem.ToString();
-            
-        }
+            salaSelecionada = salas.FirstOrDefault(s => s.Nome == nomeSalaSelecionada);
 
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-            if (tabControl1.SelectedIndex != -1)
+            if (salaSelecionada != null)
             {
-                tabControl1.TabPages.RemoveAt(tabControl1.SelectedIndex);
+                tableLayoutPanel1.Controls.Clear();
+                tableLayoutPanel1.RowCount = salaSelecionada.Linhas;
+                tableLayoutPanel1.ColumnCount = salaSelecionada.Colunas;
+                for (int i = salaSelecionada.Linhas; i >= 1; i--)
+                {
+                    for (int j = salaSelecionada.Colunas; j >= 1; j--)
+                    {
+                        Button button = new Button();
+                        button.Text = $"Assento {i}-{j}";
+                        tableLayoutPanel1.Controls.Add(button);
+                    }
+                    
+                }
             }
+            }
+
+
+        private void buttonAdicionarAssentos_Click(object sender, EventArgs e)
+        {
+            if (salaSelecionada == null)
+            {
+                MessageBox.Show("Selecione uma sala antes de adicionar assentos.");
+                return;
+            }
+
+            int linhas = int.Parse(textBoxLinhas.Text);
+            int colunas = int.Parse(textBoxColunas.Text);
+
+            salaSelecionada.AdicionarLinhasColunas(linhas, colunas);
+
+            tableLayoutPanel1.Controls.Clear();
+
+            for (int i = 0; i < salaSelecionada.Linhas; i++)
+            {
+                for (int j = 0; j < salaSelecionada.Colunas; j++)
+                {
+                    Button button = new Button();
+                    button.Text = $"Assento {i + 1}-{j + 1}";
+                    tableLayoutPanel1.Controls.Add(button);
+                }
+            }
+
+
+            MessageBox.Show($"As linhas e colunas foram adicionadas à sala: {salaSelecionada.Nome}");
         }
 
         private void button_adicionarlinhas_Click(object sender, EventArgs e)
