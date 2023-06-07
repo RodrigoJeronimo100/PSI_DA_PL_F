@@ -1,158 +1,119 @@
-    using ProjetoDA.Classes;
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel;
-    using System.Data;
-    using System.Drawing;
-    using System.IO;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
-    using System.Windows.Forms;
+using System;
+using System.ComponentModel;
+using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
+using System.Drawing;
+using System.Net.NetworkInformation;
+using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 
 namespace ProjetoDA
 {
     public partial class FormCinema : Form
     {
-        private int contadorSalas = 1;
-        
-        private List<Sala> salas = new List<Sala>();
-        private Sala salaSelecionada;
+
 
         public FormCinema()
         {
             InitializeComponent();
-            CarregarProgresso();
-
-            comboBox2.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
-
-        }
-        private void Cinema_Load(object sender, EventArgs e)
-        {
-
         }
 
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            TabPage novaAba = new TabPage("Sala " + contadorSalas);
-            tabControl1.TabPages.Add(novaAba);
-
-            contadorSalas++;
-
-            SalvarProgresso();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            if (tabControl1.TabPages.Count > 0)
-            {
-                TabPage guiaSelecionada = tabControl1.SelectedTab;
-                tabControl1.TabPages.Remove(guiaSelecionada);
-            }
-        }
-
-        private void SalvarProgresso()
-        {
-            string arquivo = "progresso.txt";
-            using (StreamWriter writer = new StreamWriter(arquivo))
-            {
-                foreach (TabPage tabPage in tabControl1.TabPages)
-                {
-                    writer.WriteLine(tabPage.Text);
-                }
-            }
-        }
-        private void CarregarProgresso()
-        {
-            string arquivo = "progresso.txt";
-            if (File.Exists(arquivo))
-            {
-                using (StreamReader reader = new StreamReader(arquivo))
-                {
-                    string linha;
-                    while ((linha = reader.ReadLine()) != null)
-                    {
-                        TabPage novaSala = new TabPage(linha);
-                        tabControl1.TabPages.Add(novaSala);
-                    }
-                }
-            }
-        }
-        
         private void buttonAdicionarSalas_Click(object sender, EventArgs e)
         {
-            string nomeSala = textBoxSalas.Text;
+            int quantidadeSalas;
 
-            if (string.IsNullOrEmpty(nomeSala))
+            if (int.TryParse(textBoxSalas.Text, out quantidadeSalas))
             {
-                MessageBox.Show("Digite um nome para a sala.");
-                return;
-            }
-            
-        Sala novaSala = new Sala(nomeSala);
-            salas.Add(novaSala);
-            comboBox2.Items.Add(nomeSala);
+                comboBoxSalas.Items.Clear();
 
-            textBoxSalas.Clear();
-            textBoxSalas.Focus();
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-
-            string nomeSalaSelecionada = comboBox2.SelectedItem.ToString();
-            salaSelecionada = salas.FirstOrDefault(s => s.Nome == nomeSalaSelecionada);
-
-            if (salaSelecionada != null)
-            {
-                tableLayoutPanel1.Controls.Clear();
-                tableLayoutPanel1.RowCount = salaSelecionada.Linhas;
-                tableLayoutPanel1.ColumnCount = salaSelecionada.Colunas;
-                for (int i = salaSelecionada.Linhas; i >= 1; i--)
+                for (int i = 1; i <= quantidadeSalas; i++)
                 {
-                    for (int j = salaSelecionada.Colunas; j >= 1; j--)
-                    {
-                        Button button = new Button();
-                        button.Text = $"Assento {i}-{j}";
-                        tableLayoutPanel1.Controls.Add(button);
-                    }
-                    
+                    string nomeSala = $"Sala {i}";
+                    comboBoxSalas.Items.Add(nomeSala);
+                }
+
+                comboBoxSalas.Sorted = true;
+
+                if (comboBoxSalas.Items.Count > 0)
+                {
+                    comboBoxSalas.SelectedIndex = 0;
                 }
             }
+            else
+            {
+                MessageBox.Show("Insira um valor válido para a quantidade de salas.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
+        }
 
         private void buttonAdicionarAssentos_Click(object sender, EventArgs e)
         {
-            if (salaSelecionada == null)
+            string salaSelecionada = comboBoxSalas.SelectedItem?.ToString();
+            string linha = textBoxLinha.Text;
+            string coluna = textBoxColuna.Text;
+
+            if (!string.IsNullOrEmpty(salaSelecionada) && !string.IsNullOrEmpty(linha) && !string.IsNullOrEmpty(coluna))
             {
-                MessageBox.Show("Selecione uma sala antes de adicionar assentos.");
-                return;
-            }
+                int linhas, colunas;
 
-            int linhas = int.Parse(textBoxLinhas.Text);
-            int colunas = int.Parse(textBoxColunas.Text);
-
-            salaSelecionada.AdicionarLinhasColunas(linhas, colunas);
-
-            tableLayoutPanel1.Controls.Clear();
-
-            for (int i = 0; i < salaSelecionada.Linhas; i++)
-            {
-                for (int j = 0; j < salaSelecionada.Colunas; j++)
+                if (int.TryParse(linha, out linhas) && int.TryParse(coluna, out colunas))
                 {
-                    Button button = new Button();
-                    button.Text = $"Assento {i + 1}-{j + 1}";
-                    tableLayoutPanel1.Controls.Add(button);
+                    if (tableLayoutPanel1 != null)
+                    {
+                        tableLayoutPanel1.Controls.Clear(); // Clear the existing controls in tableLayoutPanel1
+                    }
+                    else
+                    {
+                        tableLayoutPanel1 = new TableLayoutPanel();
+                        tableLayoutPanel1.Dock = DockStyle.Fill;
+                    }
+
+                    tableLayoutPanel1.RowCount = linhas;
+                    tableLayoutPanel1.ColumnCount = colunas + 1; // Add 1 extra column
+
+                    for (int i = 0; i < linhas; i++)
+                    {
+                        tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F / linhas));
+
+                        for (int j = 0; j <= colunas; j++) // Include the extra column
+                        {
+                            if (j == 0) // First column
+                            {
+                                // Add a separator panel instead of a button
+                                Panel separatorPanel = new Panel();
+                                separatorPanel.Width = 10;
+                                tableLayoutPanel1.Controls.Add(separatorPanel, j, i);
+                            }
+                            else
+                            {
+                                tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F / colunas));
+
+                                Button novoAssento = new Button();
+                                novoAssento.Text = $"Assento {i + 1}-{j}";
+                                novoAssento.Width = 70;
+                                novoAssento.Height = 70;
+
+                                tableLayoutPanel1.Controls.Add(novoAssento, j, i);
+                            }
+                        }
+                    }
+
+                    // Adjust the column styles to make the first column wider
+                    tableLayoutPanel1.ColumnStyles[0] = new ColumnStyle(SizeType.Absolute, 50);
+
+                    // Align the first row with the rest of the rows
+                    
+
+                    MessageBox.Show("Assentos adicionados com sucesso.", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("As linhas e colunas devem ser números inteiros.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-
-
-            MessageBox.Show($"As linhas e colunas foram adicionadas à sala: {salaSelecionada.Nome}");
+            else
+            {
+                MessageBox.Show("Selecione uma sala e insira valores válidos para linha e coluna.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
-
-       
     }
+
 }

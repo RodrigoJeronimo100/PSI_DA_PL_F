@@ -25,28 +25,21 @@ namespace ProjetoDA
 
     internal class Sala
     {
+        private int i;
+        private int j;
+
+        public Sala(int i, int j)
+        {
+            this.i = i;
+            this.j = j;
+        }
+
         public string Nome { get; set; }
-        public int Linhas { get; set; }
-        public int Colunas { get; set; }
+       
+       
+
         
-        public Sala(string nome)
-        {
-            Nome = nome;
-            Linhas = 0;
-            Colunas = 0;
-        }
 
-        public Sala(string nome, int linhas, int colunas)
-        {
-            Nome = nome;
-            Linhas = linhas;
-            Colunas = colunas;
-        }
-
-        public void AdicionarLinhasColunas(int linhas, int colunas)
-        {
-            Linhas = linhas;
-            Colunas = colunas;
-        }
+        
     }
 }
