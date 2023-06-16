@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
 using System.Drawing;
@@ -23,9 +24,10 @@ namespace ProjetoDA
 
             if (int.TryParse(textBoxSalas.Text, out quantidadeSalas))
             {
-                comboBoxSalas.Items.Clear();
+                int numeroSalasExistente = comboBoxSalas.Items.Count;
+                int numeroSalasNovo = quantidadeSalas + numeroSalasExistente;
 
-                for (int i = 1; i <= quantidadeSalas; i++)
+                for (int i = numeroSalasExistente + 1; i <= numeroSalasNovo; i++)
                 {
                     string nomeSala = $"Sala {i}";
                     comboBoxSalas.Items.Add(nomeSala);
@@ -43,6 +45,8 @@ namespace ProjetoDA
                 MessageBox.Show("Insira um valor válido para a quantidade de salas.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        // Declaração do dicionário para armazenar os botões de cada sala
+        private Dictionary<string, List<Button>> salasBotoes = new Dictionary<string, List<Button>>();
 
         private void buttonAdicionarAssentos_Click(object sender, EventArgs e)
         {
@@ -56,14 +60,20 @@ namespace ProjetoDA
 
                 if (int.TryParse(linha, out linhas) && int.TryParse(coluna, out colunas))
                 {
-                    if (tableLayoutPanel1 != null)
+                    // Verifica se a sala já possui botões adicionados
+                    if (!salasBotoes.ContainsKey(salaSelecionada))
                     {
-                        tableLayoutPanel1.Controls.Clear(); // Clear the existing controls in tableLayoutPanel1
+                        salasBotoes[salaSelecionada] = new List<Button>();
                     }
                     else
                     {
-                        tableLayoutPanel1 = new TableLayoutPanel();
-                        tableLayoutPanel1.Dock = DockStyle.Fill;
+                        // Se a sala já possui botões adicionados, remove os botões existentes
+                        List<Button> botoesExistentes = salasBotoes[salaSelecionada];
+                        foreach (Button botaoExistente in botoesExistentes)
+                        {
+                            tableLayoutPanel1.Controls.Remove(botaoExistente);
+                        }
+                        botoesExistentes.Clear();
                     }
 
                     tableLayoutPanel1.RowCount = linhas;
@@ -90,6 +100,10 @@ namespace ProjetoDA
                                 novoAssento.Text = $"Assento {i + 1}-{j}";
                                 novoAssento.Width = 70;
                                 novoAssento.Height = 70;
+                                novoAssento.Margin = new Padding(0); // Definir margens como zero
+
+                                // Adiciona o botão à lista correspondente à sala selecionada
+                                salasBotoes[salaSelecionada].Add(novoAssento);
 
                                 tableLayoutPanel1.Controls.Add(novoAssento, j, i);
                             }
@@ -98,9 +112,6 @@ namespace ProjetoDA
 
                     // Adjust the column styles to make the first column wider
                     tableLayoutPanel1.ColumnStyles[0] = new ColumnStyle(SizeType.Absolute, 50);
-
-                    // Align the first row with the rest of the rows
-                    
 
                     MessageBox.Show("Assentos adicionados com sucesso.", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -115,5 +126,4 @@ namespace ProjetoDA
             }
         }
     }
-
-}
+    }
