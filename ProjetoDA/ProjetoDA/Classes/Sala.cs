@@ -1,15 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ProjetoDA.Classes
 {
     internal class Sala
     {
-        public int SalaId { get; set; }
         public string Nome { get; set; }
-        public int QuantidadeCadeiras { get; set; }
+        public int Linhas { get; set; }
+        public int Colunas { get; set; }
+
+        public Sala(string nome, int linhas, int colunas)
+        {
+            Nome = nome;
+            Linhas = linhas;
+            Colunas = colunas;
+        }
     }
 }

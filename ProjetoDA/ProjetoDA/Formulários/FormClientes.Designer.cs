@@ -117,7 +117,7 @@
             this.textBoxTelemovel.Name = "textBoxTelemovel";
             this.textBoxTelemovel.Size = new System.Drawing.Size(222, 31);
             this.textBoxTelemovel.TabIndex = 7;
-            this.textBoxTelemovel.TextChanged += new System.EventHandler(this.textBoxTelemovel_TextChanged);
+            
             // 
             // textBoxNome
             // 
@@ -138,7 +138,7 @@
             this.button_inserir_dados.TabIndex = 10;
             this.button_inserir_dados.Text = "Inserir Dados";
             this.button_inserir_dados.UseVisualStyleBackColor = true;
-            this.button_inserir_dados.Click += new System.EventHandler(this.button_inserir_dados_Click);
+            
             // 
             // listBox1
             // 

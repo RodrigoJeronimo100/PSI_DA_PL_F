@@ -14,6 +14,7 @@ namespace ProjetoDA
     {
         public DbSet<Cinema> Cinemas { get; set; }
         public DbSet<Sala> Salas { get; set; }
+<<<<<<< HEAD
         public DbSet<Sessões> Sessões { get; set; }
         public DbSet<Filmes> Filmes { get; set; }
         public DbSet<Pessoa> Pessoas { get; set; }
@@ -25,6 +26,10 @@ namespace ProjetoDA
             // Set the database provider and connection string
             optionsBuilder.UseSqlServer("YourConnectionStringHere");
         }
+=======
+        //public DbSet<Filmes> Filmes { get; set; }
+        
+>>>>>>> b28ecfefcbe8599c8ee6c5d3faec9b012314ad8a
     }
 
 

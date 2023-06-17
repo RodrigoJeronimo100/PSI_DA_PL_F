@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace ProjetoDA
 {
-    public partial class teste : Form
+    public partial class FormClientes : Form
     {
-        public teste()
+        ApplicationContext applicationContext;
+        List<Clientes> ListaClientes;
+        public FormClientes()
         {
             InitializeComponent();
+            applicationContext = new ApplicationContext();
+
+            ListaClientes = new List<Clientes>();
+
         }
     }
 }
